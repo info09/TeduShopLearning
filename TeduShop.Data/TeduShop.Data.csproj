@@ -58,7 +58,13 @@
     <Compile Include="Infastructure\IUnitOfWork.cs" />
     <Compile Include="Infastructure\RepositoryBase.cs" />
     <Compile Include="Infastructure\UnitOfWork.cs" />
+    <Compile Include="Migrations\202004031516108_add_Init_2020.04.03.cs" />
+    <Compile Include="Migrations\202004031516108_add_Init_2020.04.03.designer.cs">
+      <DependentUpon>202004031516108_add_Init_2020.04.03.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\ProductCategoryRepository.cs" />
     <Compile Include="TeduShopDbContext.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -76,7 +82,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Repository\" />
+    <EmbeddedResource Include="Migrations\202004031516108_add_Init_2020.04.03.resx">
+      <DependentUpon>202004031516108_add_Init_2020.04.03.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
