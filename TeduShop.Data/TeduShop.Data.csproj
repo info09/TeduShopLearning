@@ -62,8 +62,13 @@
     <Compile Include="Migrations\202004031516108_add_Init_2020.04.03.designer.cs">
       <DependentUpon>202004031516108_add_Init_2020.04.03.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004041607444_add_Table_Error_2020.04.04.cs" />
+    <Compile Include="Migrations\202004041607444_add_Table_Error_2020.04.04.designer.cs">
+      <DependentUpon>202004041607444_add_Table_Error_2020.04.04.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\ErrorRepository.cs" />
     <Compile Include="Repository\FooterRepository.cs" />
     <Compile Include="Repository\MenuGroupRepository.cs" />
     <Compile Include="Repository\MenuRepository.cs" />
@@ -100,6 +105,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202004031516108_add_Init_2020.04.03.resx">
       <DependentUpon>202004031516108_add_Init_2020.04.03.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004041607444_add_Table_Error_2020.04.04.resx">
+      <DependentUpon>202004041607444_add_Table_Error_2020.04.04.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
