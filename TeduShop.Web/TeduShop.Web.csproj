@@ -209,6 +209,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App\app.js" />
+    <Content Include="App\app.route.js" />
+    <Content Include="App\components\products\product.route.js" />
+    <Content Include="App\components\products\productAddController.js" />
+    <Content Include="App\components\products\productAddView.html" />
+    <Content Include="App\components\products\productEditController.js" />
+    <Content Include="App\components\products\productEditView.html" />
+    <Content Include="App\components\products\productListController.js" />
+    <Content Include="App\components\products\productListView.html" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -216,10 +225,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="node_modules\angular\angular-csp.css" />
-    <Content Include="node_modules\angular\angular.js" />
-    <Content Include="node_modules\angular\angular.min.js" />
-    <Content Include="node_modules\angular\index.js" />
+    <Content Include="Assets\Admin\libs\angular\angular-csp.css" />
+    <Content Include="Assets\Admin\libs\angular\angular.js" />
+    <Content Include="Assets\Admin\libs\angular\angular.min.js" />
+    <Content Include="Assets\Admin\libs\angular\index.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -230,11 +239,19 @@
     <Content Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App\components\orders\" />
+    <Folder Include="App\components\product_categories\" />
+    <Folder Include="App\components\roles\" />
+    <Folder Include="App\components\users\" />
+    <Folder Include="App\shared\footer\" />
+    <Folder Include="App\shared\navigation\" />
+    <Folder Include="App\shared\services\" />
     <Folder Include="App_Data\" />
-    <Folder Include="Assets\Admin\" />
+    <Folder Include="Assets\Admin\css\" />
+    <Folder Include="Assets\Admin\img\" />
+    <Folder Include="Assets\Admin\js\" />
     <Folder Include="Assets\Client\" />
-    <Folder Include="Scripts\plugin\" />
-    <Folder Include="Scripts\SPA\" />
+    <Folder Include="node_modules\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -246,12 +263,12 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="package.json" />
-    <Content Include="node_modules\angular\angular.min.js.gzip" />
-    <Content Include="node_modules\angular\angular.min.js.map" />
-    <Content Include="node_modules\angular\bower.json" />
-    <Content Include="node_modules\angular\LICENSE.md" />
-    <Content Include="node_modules\angular\package.json" />
-    <Content Include="node_modules\angular\README.md" />
+    <Content Include="Assets\Admin\libs\angular\angular.min.js.gzip" />
+    <Content Include="Assets\Admin\libs\angular\angular.min.js.map" />
+    <Content Include="Assets\Admin\libs\angular\bower.json" />
+    <Content Include="Assets\Admin\libs\angular\LICENSE.md" />
+    <Content Include="Assets\Admin\libs\angular\package.json" />
+    <Content Include="Assets\Admin\libs\angular\README.md" />
     <None Include="packages.config" />
     <Content Include="Views\Admin\Index.cshtml" />
   </ItemGroup>
