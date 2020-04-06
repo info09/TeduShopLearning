@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AutoMapper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -7,6 +8,9 @@ using System.Web.Http;
 using TeduShop.Model.Models;
 using TeduShop.Service;
 using TeduShop.Web.Infastructure.Core;
+using TeduShop.Web.Mappings;
+using TeduShop.Web.Models;
+using TeduShop.Web.Infastructure.Extension; 
 
 namespace TeduShop.Web.Api
 {
@@ -27,14 +31,16 @@ namespace TeduShop.Web.Api
             {
                 HttpResponseMessage response = null;
                 var listCategory = _postCategoryService.GetAll();
+                var listPostCategoryVM = Mapper.Map<List<PostCategoryViewModel>>(listCategory);
 
-                response = request.CreateResponse(HttpStatusCode.OK, listCategory);
+                response = request.CreateResponse(HttpStatusCode.OK, listPostCategoryVM);
                 return response;
             });
         }
 
         [HttpPost]
-        public HttpResponseMessage Create(HttpRequestMessage request, PostCategory postCategory)
+        [Route("Create")]
+        public HttpResponseMessage Create(HttpRequestMessage request, PostCategoryViewModel postCategoryVM)
         {
             return CreateHttpResponse(request, () =>
             {
@@ -46,8 +52,10 @@ namespace TeduShop.Web.Api
                 }
                 else
                 {
-                    var category = _postCategoryService.Add(postCategory);
-                    _postCategoryService.Save();
+                    PostCategory newPostCategory = new PostCategory();
+                    newPostCategory.UpdatePostCategory(postCategoryVM);
+                    var category = _postCategoryService.Add(newPostCategory);
+                    _postCategoryService.Save(); 
 
                     response = request.CreateResponse(HttpStatusCode.Created, category);
                 }
@@ -56,7 +64,8 @@ namespace TeduShop.Web.Api
         }
 
         [HttpPut]
-        public HttpResponseMessage Update(HttpRequestMessage request, PostCategory postCategory)
+        [Route("Update")]
+        public HttpResponseMessage Update(HttpRequestMessage request, PostCategoryViewModel postCategoryVM)
         {
             return CreateHttpResponse(request, () =>
             {
@@ -67,7 +76,9 @@ namespace TeduShop.Web.Api
                 }
                 else
                 {
-                    _postCategoryService.Update(postCategory);
+                    var postCategoryDB = _postCategoryService.GetById(postCategoryVM.ID);
+                    postCategoryDB.UpdatePostCategory(postCategoryVM);
+                    _postCategoryService.Update(postCategoryDB);
                     _postCategoryService.Save();
 
                     response = request.CreateResponse(HttpStatusCode.OK);
