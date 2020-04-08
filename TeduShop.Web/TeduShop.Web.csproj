@@ -189,6 +189,7 @@
   <ItemGroup>
     <Compile Include="Api\AccountController.cs" />
     <Compile Include="Api\PostCategoryController.cs" />
+    <Compile Include="Api\ProductCategoryController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
@@ -207,6 +208,9 @@
     <Compile Include="Models\PostCategoryViewModel.cs" />
     <Compile Include="Models\PostTagViewModel.cs" />
     <Compile Include="Models\PostViewModel.cs" />
+    <Compile Include="Models\ProductCategoryViewModel.cs" />
+    <Compile Include="Models\ProductTagViewModel.cs" />
+    <Compile Include="Models\ProductViewModel.cs" />
     <Compile Include="Models\TagViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -221,7 +225,11 @@
     <Content Include="App\components\products\productEditView.html" />
     <Content Include="App\components\products\productListController.js" />
     <Content Include="App\components\products\productListView.html" />
+    <Content Include="App\components\product_categories\productCategory.module.js" />
+    <Content Include="App\components\product_categories\productCategoryListController.js" />
+    <Content Include="App\components\product_categories\productCategoryListView.html" />
     <Content Include="App\shared\modules\tedushop.common.js" />
+    <Content Include="App\shared\services\apiService.js" />
     <Content Include="Assets\Admin\css\AdminLTE.css" />
     <Content Include="Assets\Admin\css\AdminLTE.min.css" />
     <Content Include="Assets\Admin\css\skins\skin-black-light.css" />
@@ -4952,12 +4960,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App\components\orders\" />
-    <Folder Include="App\components\product_categories\" />
     <Folder Include="App\components\roles\" />
     <Folder Include="App\components\users\" />
     <Folder Include="App\shared\footer\" />
     <Folder Include="App\shared\navigation\" />
-    <Folder Include="App\shared\services\" />
     <Folder Include="App_Data\" />
     <Folder Include="Assets\Client\" />
     <Folder Include="node_modules\" />
