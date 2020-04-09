@@ -228,6 +228,7 @@
     <Content Include="App\components\product_categories\productCategory.module.js" />
     <Content Include="App\components\product_categories\productCategoryListController.js" />
     <Content Include="App\components\product_categories\productCategoryListView.html" />
+    <Content Include="App\shared\filter\statusFilter.js" />
     <Content Include="App\shared\modules\tedushop.common.js" />
     <Content Include="App\shared\services\apiService.js" />
     <Content Include="Assets\Admin\css\AdminLTE.css" />
