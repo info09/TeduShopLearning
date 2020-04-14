@@ -10,9 +10,9 @@
         }
 
         $scope.UpdateProductCategory = UpdateProductCategory;
-        $scope.getSeoTitle = getSeoTitle;
+        $scope.GetSeoTitle = GetSeoTitle;
 
-        function getSeoTitle() {
+        function GetSeoTitle() {
             $scope.productCategory.Alias = commonService.getSeoTitle($scope.productCategory.Name);
         }
 
